@@ -1,11 +1,9 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react';
 import axios from "axios";
 import { HiBan } from "react-icons/hi";
 import { HiCheckCircle } from "react-icons/hi";
 import { HiOutlineInformationCircle } from "react-icons/hi";
-import { ToolTip } from '../components/Tooltip';
 
 const url = 'https://webservice-57a4.onrender.com';
 
@@ -25,11 +23,16 @@ export function Bot({ login }) {
             });
 
             const dataset = response.data
-            setCompanyShares(dataset);
-            if (companyShares[companyShares.length - 1]) {
-                setBalance(companyShares[companyShares.length - 1].balance);
+            if (dataset.length > 1) {
+                setCompanyShares(old => [...old, ...dataset]);
             }
+
+            if (dataset[dataset.length - 1]['balance']) {
+                setBalance(dataset[dataset.length - 1]['balance']);
+            }
+
             console.log('Fetching data from the server')
+            console.log(dataset)
         }
 
         const timer = setInterval(() => {
@@ -43,7 +46,8 @@ export function Bot({ login }) {
     useEffect(() => {
         console.log(login)
     }, [])
-    const [companyShares, setCompanyShares] = useState([]);
+    const [companyShares, setCompanyShares] = useState([
+    ]);
 
     const [capital, setCapital] = useState(null);
 
