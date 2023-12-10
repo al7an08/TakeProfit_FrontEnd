@@ -1,0 +1,354 @@
+html {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-family: 'JetBrains Mono', monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+  height: 100%;
+}
+
+
+
+.nav {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  height: 10vh;
+  position: fixed;
+  width: 95%;
+}
+
+
+.nav ul {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+  padding: 0 1rem;
+}
+
+.link {
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+
+.site-title {
+  font-size: 2rem;
+}
+
+.site-title:hover {
+  text-decoration: underline;
+}
+
+.nav li.active {
+  background-color: #555;
+}
+
+.nav li:hover {
+  text-decoration: underline;
+}
+
+.homePage {
+  min-height: 100%;
+}
+
+.wrapper {
+  height: auto;
+  /* These two lines were the key. */
+  min-height: 100%;
+  /*overflow:   hidden;*/
+  /* Do not use this, it crops in small browsers. */
+  margin: 0px auto;
+  padding: 0px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  display: flex;
+  min-height: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  height: 100%;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.authorizationBox {
+  margin-left: 5vw;
+  padding: 10px 5px;
+  font-size: 1.5rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 3%;
+  border-radius: 10px;
+  height: 30vh;
+}
+
+#root {
+  height: auto;
+  min-height: 100%;
+}
+
+.input {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.homePage {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url('../public/backgroundImage.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.enterButton {
+  width: 50%;
+  height: 7vh;
+  font-family: 'Cormorant Garamond', serif;
+  font-family: 'JetBrains Mono', monospace;
+  background-color: white;
+  border-radius: 10px;
+}
+
+
+.enterButton:hover {
+  background: rgba(0, 0, 0, 0);
+  border-radius: 1px black solid;
+  box-shadow: inset 0 0 0 1px black;
+}
+
+.enterButton:active {
+  transform: scale(0.98);
+  /* Scaling button to 0.98 to its original size */
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  /* Lowering the shadow */
+}
+
+.slogan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40vw;
+}
+
+.bigText {
+  font-size: 2rem;
+  color: white;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.mediumText {
+  font-weight: 500;
+  color: white;
+}
+
+.botPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at 50.4% 50.5%, #ff0507 0%, rgb(135, 2, 35) 90%);
+  height: 100%;
+  width: 100%;
+}
+
+.investMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 7vh;
+  background-color: white;
+  height: 67vh;
+  width: 50vw;
+  border-radius: 10px;
+  margin-right: 5vw;
+  overflow-y: auto;
+}
+
+.botSettings {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 7vh;
+  background-color: white;
+  height: 80vh;
+  width: 30vw;
+  border-radius: 10px;
+}
+
+.settingsInputDiv {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 5%;
+}
+
+.settingsInput {
+  width: 80%;
+  height: 3vh;
+  text-align: end;
+  font-size: 1.3rem;
+}
+
+.startButton {
+  width: 50%;
+  height: 13%;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  color: white;
+  font-family: 'Cormorant Garamond', serif;
+  font-family: 'JetBrains Mono', monospace;
+  /* background: radial-gradient(circle at 50.4% 50.5%, rgb(251, 32, 86) 0%, rgb(135, 2, 35) 90%); */
+  background: #ff0507;
+  border: solid 2px white;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  transition: all300ms ease;
+  border-radius: 20px;
+}
+
+.companySharesList {
+  padding: 50px;
+}
+
+.settingsLabel {
+  width: 20vw;
+}
+
+
+.input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin: 0;
+  padding: 0;
+  width: 40px;
+}
+
+.select {
+  font-family: 'Cormorant Garamond', serif;
+  font-family: 'JetBrains Mono', monospace;
+  text-align: center;
+  height: 5vh;
+}
+
+.selectDiv {
+  display: flex;
+  align-items: center;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+.tableShare {
+  width: 95%;
+  margin: 10px 10px;
+  padding: 10px;
+}
+
+.guideDiv {
+  background-color: white;
+  width: 80%;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.startButton:hover {
+  transform: scale(0.99);
+  /* Scaling button to 0.98 to its original size */
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  /* Lowering the shadow */
+}
+
+.startButton:active {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 15vw;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 5px;
+
+  /* Position the tooltip */
+  position: absolute;
+
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 3vh;
+  width: 50vw;
+  height: 10vh;
+  background: red;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.balance {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.list_desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 10px;
+  height: 60vh;
+}
